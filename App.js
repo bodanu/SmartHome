@@ -29,6 +29,9 @@ import Bugs from './bugs';
 import Light from './light';
 import Temperature from './temp';
 import TemperatureLocal from './temperature';
+import Update from './update';
+
+
 const App: () => React$Node = () => {
   return (
 
@@ -80,6 +83,13 @@ const App: () => React$Node = () => {
               <Text style={styles.sectionTitle}>Temperatura</Text>
               <Text style={styles.sectionDescription}>Vezi temperatura de afara/inauntru (momentan in faza de dezvoltare)</Text>
                 <TemperatureLocal />
+            </View>
+            <View style={styles.bottomSection}>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Actualizari</Text>
+              <Text style={styles.sectionDescription}>Verifica daca sunt actualizari (momentan in faza de dezvoltare)</Text>
+                <Update />
+            </View>
             </View>
             <Text style={styles.sectionDescription}>{'\u00A9'}Bogdan Hiriscau - 2019</Text>
           </View>
@@ -136,6 +146,9 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
+  bottomSection: {
+    marginTop: 32,
+  }
 });
 
 export default App;
