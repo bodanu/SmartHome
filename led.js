@@ -33,20 +33,20 @@ export default class Led extends Component<Props> {
     return (
     <>
       <View style={{margin:10}}>
-                    <Button
-                       onPress={this._turnOn}
-                       color='#48BBEC'
-                       title='Aprinde'
-                     />
-                     </View>
-                     <View style={{margin:10}}>
-                      <Button
-                         onPress={this._turnOff}
-                         color='#48BBEC'
-                         title='Stinge'
-                       />
-                       </View>
-                       </>
+        <Button
+           onPress={this._turnOn}
+           color='#48BBEC'
+           title='Aprinde'
+         />
+         </View>
+         <View style={{margin:10}}>
+          <Button
+             onPress={this._turnOff}
+             color='#48BBEC'
+             title='Stinge'
+           />
+           </View>
+           </>
     );
   }
 }
