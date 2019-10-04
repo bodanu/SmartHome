@@ -81,7 +81,7 @@ const App: () => React$Node = () => {
               <Text style={styles.sectionDescription}>Vezi temperatura de afara/inauntru (momentan in faza de dezvoltare)</Text>
                 <TemperatureLocal />
             </View>
-            <Text style={styles.sectionDescription}>{'\u00A9'}Bogdan Hiriscau - 2019</Text>
+            <Text style={styles.sectionDescription}>{'\u00A9'}Bogdan Hiriscau - 1991-2019</Text>
           </View>
         </ScrollView>
       </SafeAreaView>
