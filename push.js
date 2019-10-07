@@ -5,7 +5,7 @@ export default class Push extends Component {
 
 constructor(properties) {
     super(properties);
-    OneSignal.init("5c4c1a85-9f5e-40d1-b915-59eebf374c29", {kOSSettingsKeyAutoPrompt : true});
+    OneSignal.init("5c4c1a85-9f5e-40d1-b915-59eebf374c29");
 
     OneSignal.addEventListener('received', this.onReceived);
     OneSignal.addEventListener('opened', this.onOpened);

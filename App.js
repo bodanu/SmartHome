@@ -31,7 +31,7 @@ import Temperature from './temp';
 import TemperatureLocal from './temperature';
 import Update from './update';
 import OneSignal from 'react-native-onesignal';
-import Push from './push';
+
 
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
@@ -73,7 +73,7 @@ static navigationOptions = {
     )
     }
     }
-<Push/>
+
 class More extends React.Component {
 static navigationOptions = {
     title: 'Proiecte pentru viitor',
@@ -92,7 +92,7 @@ static navigationOptions = {
               <View style={styles.img}>
               <Image source={require('./Resources/house.png')} style={styles.image}/>
               </View>
-              <Text style={styles.sectionDescription}>In constructie...
+              <Text style={styles.sectionDescription}>In constructie....
               </Text>
                 </View>
             </ScrollView>
@@ -239,5 +239,36 @@ const AppNavigator = createStackNavigator({
     screen: More
   },
 });
+class Push extends React.Component {
 
+constructor(properties) {
+    super(properties);
+    OneSignal.init("5c4c1a85-9f5e-40d1-b915-59eebf374c29");
+
+    OneSignal.addEventListener('received', this.onReceived);
+    OneSignal.addEventListener('opened', this.onOpened);
+    OneSignal.addEventListener('ids', this.onIds);
+  }
+
+  componentWillUnmount() {
+    OneSignal.removeEventListener('received', this.onReceived);
+    OneSignal.removeEventListener('opened', this.onOpened);
+    OneSignal.removeEventListener('ids', this.onIds);
+  }
+
+  onReceived(notification) {
+    console.log("Notification received: ", notification);
+  }
+
+  onOpened(openResult) {
+    console.log('Message: ', openResult.notification.payload.body);
+    console.log('Data: ', openResult.notification.payload.additionalData);
+    console.log('isActive: ', openResult.notification.isAppInFocus);
+    console.log('openResult: ', openResult);
+  }
+
+  onIds(device) {
+    console.log('Device info: ', device);
+  }
+}
 export default createAppContainer(AppNavigator);
