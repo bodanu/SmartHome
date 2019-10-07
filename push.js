@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import OneSignal from 'react-native-onesignal'; // Import package from node modules
 
-export default class Push extends Component {
+export default class Push extends React.Component {
 
 constructor(properties) {
     super(properties);
