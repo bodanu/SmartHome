@@ -30,9 +30,12 @@ import Light from './light';
 import Temperature from './temp';
 import TemperatureLocal from './temperature';
 import Update from './update';
+import Push from './push';
 
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+
+
 
 
 
