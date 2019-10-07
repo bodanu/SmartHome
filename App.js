@@ -50,7 +50,7 @@ static navigationOptions = {
             <ScrollView
               contentInsetAdjustmentBehavior="automatic"
               style={styles.scrollView}>
-
+                 <View style={styles.sectionContainer}>
               <Text style={styles.cacao}>Smart Home</Text>
               <View style={styles.img}>
               <Image source={require('./Resources/house.png')} style={styles.image}/>
@@ -62,6 +62,7 @@ static navigationOptions = {
                </View>
                <View style={{margin:10}}>
                 <Button onPress={() => this.props.navigation.navigate('More')} color='#48BBEC' title="Vezi Urmatoarele proiecte" />
+              </View>
               </View>
             </ScrollView>
           </SafeAreaView>
@@ -83,14 +84,14 @@ static navigationOptions = {
             <ScrollView
               contentInsetAdjustmentBehavior="automatic"
               style={styles.scrollView}>
-
+                <View style={styles.sectionContainer}>
               <Text style={styles.cacao}>Viitoare proiecte</Text>
               <View style={styles.img}>
               <Image source={require('./Resources/house.png')} style={styles.image}/>
               </View>
               <Text style={styles.sectionDescription}>In constructie...
               </Text>
-
+                </View>
             </ScrollView>
           </SafeAreaView>
         </>
