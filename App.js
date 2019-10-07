@@ -58,10 +58,10 @@ static navigationOptions = {
               <Text style={styles.sectionDescription}>Aplicatie in faza de dezvoltare, functionalitate limitata
               </Text>
               <View style={{margin:10}}>
-                 <Button onPress={() => this.props.navigation.navigate('Dispozitive')} color='#48BBEC' title="Vezi Dispozitive =>" />
+                 <Button onPress={() => this.props.navigation.navigate('Dispozitive')} color='#48BBEC' title="Vezi Dispozitive" />
                </View>
                <View style={{margin:10}}>
-                <Button onPress={() => this.props.navigation.navigate('More')} color='#48BBEC' title="Vezi Urmatoarele proiecte =>" />
+                <Button onPress={() => this.props.navigation.navigate('More')} color='#48BBEC' title="Vezi Urmatoarele proiecte" />
               </View>
             </ScrollView>
           </SafeAreaView>
@@ -156,7 +156,7 @@ static navigationOptions = {
                 </View>
                 <View style={styles.bottomSection}>
                 <View style={{margin:10}}>
-                 <Button onPress={() => this.props.navigation.navigate('Home')} color='#48BBEC' title='Inapoi Acasa =>' />
+                 <Button onPress={() => this.props.navigation.navigate('Home')} color='#48BBEC' title='Inapoi Acasa' />
                </View>
                 <View style={styles.sectionContainer}>
                   <Text style={styles.sectionTitle}>Actualizari</Text>
