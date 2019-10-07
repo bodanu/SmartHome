@@ -30,12 +30,11 @@ import Light from './light';
 import Temperature from './temp';
 import TemperatureLocal from './temperature';
 import Update from './update';
+import OneSignal from 'react-native-onesignal';
 import Push from './push';
 
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-
-
 
 
 
@@ -55,6 +54,7 @@ static navigationOptions = {
               style={styles.scrollView}>
                  <View style={styles.sectionContainer}>
               <Text style={styles.cacao}>Smart Home</Text>
+
               <View style={styles.img}>
               <Image source={require('./Resources/house.png')} style={styles.image}/>
               </View>
@@ -73,7 +73,7 @@ static navigationOptions = {
     )
     }
     }
-
+<Push/>
 class More extends React.Component {
 static navigationOptions = {
     title: 'Proiecte pentru viitor',
