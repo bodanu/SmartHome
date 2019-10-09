@@ -12,7 +12,7 @@ export default class TemperatureLocal extends React.Component {
   }
 
   componentDidMount(){
-    return fetch('https://checkout-btonic.herokuapp.com/temp.php',{
+    return fetch('https://smart-home-controler.herokuapp.com/',{
     crossDomain: true,
      method: "GET"
     })
